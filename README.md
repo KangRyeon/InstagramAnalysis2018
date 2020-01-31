@@ -69,9 +69,8 @@
             2) output
                 - [크롤러] 폴더의 [오늘의훈남] 폴더 : 코드 실행 후 각 아이디의 프로필 사진 저장.
    
-![instagram_analysis_1](./image/instagram_analysis_1.jpg)
-![instagram_analysis_2](./image/instagram_analysis_2.jpg)
-![instagram_analysis_3](./image/instagram_analysis_3.jpg)
+![instagram_crawling](./image/instagram_crawling.jpg)
+
 #### 2. 이미지로 성별 분류하는 기능
     *** Google Vision API를 사용해 프로필 사진으로 성별을 분류합니다. ***
     *** 아래의 방법 중 [instagram_crawling_10post.py], [gender_classification_3.py] 코드만 실행하시면 됩니다. ***
@@ -155,7 +154,8 @@
         (3) 결과
             * 200개 중에 134개만 구분할 수 있었음. => 스스로 검증하는 작업 필요!
          
-         
+![gender_classification](./image/gender_classification.jpg)
+
 #### 3. 형태소 분석 기능
     *** KoNLP, Gensim doc2vec을 사용해 형태소를 분석합니다. ***
     1. content_analysis_with_konlp.py
@@ -169,3 +169,5 @@
                 - instagramWithForm.xlsx 필요 => 크롤링 후 저장된 것.
             2) output
                 - instagramWithForm.xlsx에 추가적인 내용까지 저장
+
+![content_analysis](./image/content_analysis.jpg)
