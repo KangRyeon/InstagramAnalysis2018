@@ -72,7 +72,7 @@
         
 #### 2. 이미지로 성별 분류하는 기능
     *** Google Vision API를 사용해 프로필 사진으로 성별을 분류합니다. ***
-
+    *** 아래의 방법 중 [instagram_crawling_10post.py], [gender_classification_3.py] 코드만 실행하시면 됩니다. ***
     1. gender_classification_1.py
         (1) 소스코드 설명
             * 프로필 사진을 Google Vision API를 사용해 분석했을 때 나오는 레이블 값에 따라 성별을 분류합니다.
@@ -149,4 +149,21 @@
                 - [크롤러] 폴더의 [오늘의훈남2] 폴더 필요 => 각 아이디당 게시글 10개대한 사진 저장된 폴더
             2) output
                 - instagramWithForm.xlsx에 추가적인 내용까지 저장
-     
+                
+        (3) 결과
+            * 200개 중에 134개만 구분할 수 있었음. => 스스로 검증하는 작업 필요!
+         
+         
+#### 3. 형태소 분석 기능
+    *** KoNLP, Gensim doc2vec을 사용해 형태소를 분석합니다. ***
+    1. content_analysis_with_konlp.py
+        (1) 소스코드 설명
+            * KoNLP를 사용해 문장을 분류합니다.
+            * 크롤링한 본문의 내용 형태소를 분류합니다.
+            
+        (2) input/output 파일
+            * 같은 파일로 저장하므로 파일에 대한 백업이 필요합니다.
+            1) input
+                - instagramWithForm.xlsx 필요 => 크롤링 후 저장된 것.
+            2) output
+                - instagramWithForm.xlsx에 추가적인 내용까지 저장
