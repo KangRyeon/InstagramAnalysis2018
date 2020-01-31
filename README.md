@@ -42,7 +42,7 @@
 
 
 # 주요 기능별 소스코드 설명
-### 1. 게시글 이미지, 댓글, 본문 
+## 1. 게시글 이미지, 댓글, 본문 
     *** 아래의 두 개 방법 중 [크롤링 한 결과를 excel에 저장]하는 코드만 실행하시면 됩니다. ***
     1. 크롤링 한 결과를 txt에 저장
         (1) instagram_crawling_1-1(txt_version).py : 인스타그램 게시글의 아이디, 태그, 본문 저장하기
@@ -71,7 +71,7 @@
    
 ![instagram_crawling](./image/instagram_crawling.jpg)
 
-### 2. 이미지로 성별 분류하는 기능
+## 2. 이미지로 성별 분류하는 기능
     *** Google Vision API를 사용해 프로필 사진으로 성별을 분류합니다. ***
     *** 아래의 방법 중 [instagram_crawling_10post.py], [gender_classification_3.py] 코드만 실행하시면 됩니다. ***
     1. gender_classification_1.py
@@ -156,7 +156,7 @@
          
 ![gender_classification](./image/gender_classification.jpg)
 
-### 3. 형태소 분석 기능
+## 3. 형태소 분석 기능
     *** KoNLP, Gensim doc2vec을 사용해 형태소를 분석합니다. ***
     1. content_analysis_with_konlp.py
         (1) 소스코드 설명
