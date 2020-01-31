@@ -79,25 +79,25 @@
                 - ["girl", "beauty"]라는 단어가 나올 경우 [여성(1)]
                 - ["boy"]라는 단어가 나올 경우 [남성(0)]
                 - 안나올 경우 [모름(9999)]
+                
         (2) input/output 파일
             * 같은 파일로 저장하므로 파일에 대한 백업이 필요합니다.
             1) input
                 - instagramWithForm.xlsx 필요 => 크롤링 후 저장된 것.
             2) output
                 - instagramWithForm.xlsx 에 추가적인 내용까지 저장
+                
         (3) 결과
             * 200개 중에 43개만 구분할 수 있었음.
                 - 프로필 사진이 사람이 아닐 경우도 있어서
                 - 사람이지만 성별을 모를 수 있어서
+                => 해결 필요
               
-    2. gender classification_2.py
+              
+    2. gender_classification_2.py
         (1) 소스코드 설명
-            * 200개 중에 43개만 구분한 위의 문제점을 해결하기 위해
+            * 200개 중에 43개만 구분한 위의(gender_classification_1.py) 문제점을 해결하기 위해
                 - 프로필 사진 하나만이 아닌 각자 게시물 10개 사진을 가져와 그 사진으로 성별 분류
-                - girl, boy 말고 다른 label로 분류하기
-                    - ["girl", "beauty", "long hair", "woman"]라는 단어가 나올 경우 [여성(1)]
-                    - ["boy", "military", "suit", "man", "male"]라는 단어가 나올 경우 [남성(0)]
-                    - 안나올 경우 [모름(9999)]
                     
         (2) instagram_crawling_10post.py
             * 위에서 크롤링한 것에 추가로 게시물 10개 사진 크롤링 하는 파일 필요
@@ -113,3 +113,40 @@
                 - [크롤러] 폴더의 [오늘의훈남2] 폴더 필요 => 각 아이디당 게시글 10개대한 사진 저장된 폴더
             2) output
                 - instagramWithForm.xlsx에 추가적인 내용까지 저장
+                
+        (4) 결과
+            * 200개 중에 125개만 구분할 수 있었음.
+                => 해결 필요
+
+
+    3. gender_label_find.py
+        (1) 소스코드 설명
+            * 200개 중에 125개만 구분한 위의 문제점을 해결하기 위해
+                - label 더 추가해 분류하기 => 어떤 label값을 할지 먼저 파악해야 함.
+                - [girl, beauty], [boy] 와 함께 나온 label이 무엇인지 파악해 성별분류 가능한 label값 찾아내기
+                
+        (2) input/output 파일
+            * 같은 파일로 저장하므로 파일에 대한 백업이 필요합니다.
+            1) input
+                - instagramWithForm.xlsx 필요 => 크롤링 후 저장된 것.
+                - [크롤러] 폴더의 [오늘의훈남2] 폴더 필요 => 각 아이디당 게시글 10개대한 사진 저장된 폴더
+            2) output
+                - instagramGenderLabel.xlsx에 성별별로 label 저장
+                
+                
+    4. gender_classification_3.py
+        (1) 소스코드 설명
+            * 위의 gender_label_find.py를 통해 찾아낸 성별분류 가능한 label값으로 다시 분류
+                - girl, boy 말고 다른 label로 분류하기(10개중에 여성:5, 남성:3, 모름:2 => 여성)
+                - ["girl", "beauty", "long hair", "woman"]라는 단어가 나올 경우 [여성(1)]
+                - ["boy", "military", "suit", "man", "male"]라는 단어가 나올 경우 [남성(0)]
+                - 안나올 경우 [모름(9999)]
+                
+        (2) input/output 파일
+            * 같은 파일로 저장하므로 파일에 대한 백업이 필요합니다.
+            1) input
+                - instagramWithForm.xlsx 필요 => 크롤링 후 저장된 것.
+                - [크롤러] 폴더의 [오늘의훈남2] 폴더 필요 => 각 아이디당 게시글 10개대한 사진 저장된 폴더
+            2) output
+                - instagramWithForm.xlsx에 추가적인 내용까지 저장
+     
