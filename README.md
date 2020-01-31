@@ -15,6 +15,7 @@
     1. 구현 환경
         - Window 7
         - Python
+        
     2. 사용한 라이브러리 및 기능
         - Google Vision API를 사용해 인물, 성별 탐지
         - KoNLP를 사용한 형태소 분석
