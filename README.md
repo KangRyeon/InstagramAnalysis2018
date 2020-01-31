@@ -154,8 +154,8 @@
         (3) 결과
             * 200개 중에 134개만 구분할 수 있었음. => 스스로 검증하는 작업 필요!
          
-![gender_classification](./image/gender_classification.jpg)(: width="300" height="300"){: .center}
-
+![gender_classification](./image/gender_classification.jpg)
+<img src="./image/gender_classification.jpg" width="40%">
 ### 3. 형태소 분석 기능
     *** KoNLP, Gensim doc2vec을 사용해 형태소를 분석합니다. ***
     1. content_analysis_with_konlp.py
