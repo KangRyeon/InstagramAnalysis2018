@@ -69,7 +69,9 @@
             2) output
                 - [크롤러] 폴더의 [오늘의훈남] 폴더 : 코드 실행 후 각 아이디의 프로필 사진 저장.
    
-        
+![instagram_analysis_1](./image/instagram_analysis_1.jpg)
+![instagram_analysis_2](./image/instagram_analysis_2.jpg)
+![instagram_analysis_3](./image/instagram_analysis_3.jpg)
 #### 2. 이미지로 성별 분류하는 기능
     *** Google Vision API를 사용해 프로필 사진으로 성별을 분류합니다. ***
     *** 아래의 방법 중 [instagram_crawling_10post.py], [gender_classification_3.py] 코드만 실행하시면 됩니다. ***
